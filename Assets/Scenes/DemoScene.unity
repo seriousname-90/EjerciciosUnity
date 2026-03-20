@@ -3100,6 +3100,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807497889}
   m_CullTransparentMesh: 1
+--- !u!1 &1813907422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813907424}
+  - component: {fileID: 1813907423}
+  m_Layer: 0
+  m_Name: GestorDestino
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1813907423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813907422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563fe03f6c23dc74bb96ab733c696c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestorDestino
+  prefabPorDefecto: {fileID: 5874463380868625532, guid: becbdf1594acd4a4e9551e9a83a4b436, type: 3}
+--- !u!4 &1813907424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813907422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.12206, y: 0.125, z: 0.75142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815318735
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,7 +4056,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PortalAvanzado
   nombreEscenaDestino: Main VR Scene
   posicionDestino: {x: 0, y: 1, z: 0}
-  esPortalDeRegreso: 1
   teletransportarObjetos: 1
 --- !u!1001 &2081121853
 PrefabInstance:
@@ -4087,7 +4131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b627f03bb58b9494b8afe399315bb1bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AjustePosicionInicial
-  TPObject: {fileID: 0}
+  xrOrigin: {fileID: 0}
+  gestorDestino: {fileID: 0}
 --- !u!1 &196977305468683332
 GameObject:
   m_ObjectHideFlags: 0
@@ -8111,3 +8156,4 @@ SceneRoots:
   - {fileID: 3953970342977539823}
   - {fileID: 2081121853}
   - {fileID: 1995887824}
+  - {fileID: 1813907424}
