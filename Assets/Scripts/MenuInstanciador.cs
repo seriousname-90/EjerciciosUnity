@@ -42,7 +42,7 @@ public class MenuInstanciador : MonoBehaviour
             case "Esfera":
                 nuevoObjeto = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 break;
-            case "Cápsula":
+            case "Capsula":
                 nuevoObjeto = GameObject.CreatePrimitive(PrimitiveType.Capsule);
                 break;
         }
