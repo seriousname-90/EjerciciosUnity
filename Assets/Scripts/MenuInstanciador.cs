@@ -11,6 +11,12 @@ public class MenuInstanciador : MonoBehaviour
     public Slider sliderMax;
     public Button botonCrear;
     
+    [Header("Prefabs")]
+    public GameObject prefabCubo;      // Arrastra aquí
+    public GameObject prefabEsfera;    // Arrastra aquí
+    public GameObject prefabCapsula;   // Arrastra aquí
+    public GameObject prefabCuchara; 
+
     [Header("Posición de creación")]
     public Vector3 posicionCreacion = new Vector3(0, 2.5f, -3f);
     
@@ -37,13 +43,16 @@ public class MenuInstanciador : MonoBehaviour
         switch (tipo)
         {
             case "Cubo":
-                nuevoObjeto = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                nuevoObjeto = Instantiate(prefabCubo);
                 break;
             case "Esfera":
-                nuevoObjeto = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                nuevoObjeto = Instantiate(prefabEsfera);
                 break;
             case "Capsula":
-                nuevoObjeto = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+                nuevoObjeto = Instantiate(prefabCapsula);
+                break;
+            case "Cuchara":
+                nuevoObjeto = Instantiate(prefabCuchara);
                 break;
         }
         
