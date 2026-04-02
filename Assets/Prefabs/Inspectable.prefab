@@ -37171,7 +37171,6 @@ GameObject:
   - component: {fileID: 2744303289047559994}
   - component: {fileID: 8017003653626685083}
   - component: {fileID: 5924893411493274152}
-  - component: {fileID: 7733980379865904226}
   m_Layer: 0
   m_Name: Inspectable
   m_TagString: Teletransportable
@@ -37457,19 +37456,6 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 2
---- !u!114 &7733980379865904226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5874463380868625532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696d4b306b525e546a88e364a74a2fc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjetoTeletransportable
-  destruirAlTeletransportar: 0
 --- !u!1 &8886373820307669910
 GameObject:
   m_ObjectHideFlags: 0

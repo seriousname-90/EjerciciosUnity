@@ -12,58 +12,33 @@ public class PortalAvanzado : MonoBehaviour
     
     private bool teleportando = false;
     
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) // Detecta al jugador o a objetos teletransportables
     {
-        if (teleportando) return;
+        if (teleportando) return; // Evita múltiples activaciones mientras se carga la escena
         
-        // CASO 1: Es el jugador - CAMBIA DE ESCENA
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) // Si el jugador entra, carga la nueva escena
         {
             teleportando = true;
             PortalManager.posicionLlegada = posicionDestino;
-           // PortalManager.objetoATeletransportar = null;
             SceneManager.LoadScene(nombreEscenaDestino);
         }
-        // CASO 2: Es un objeto - SOLO LO TELETRANSPORTA, NO CAMBIA ESCENA
-        else if (teletransportarObjetos && other.CompareTag("Teletransportable"))
+        else if (teletransportarObjetos && other.CompareTag("Teletransportable")) // Si un objeto teletransportable entra, guarda sus datos para recrearlo en la nueva escena
         {
             TeletransportarObjeto(other.gameObject);
         }
     }
     
-    void TeletransportarObjeto(GameObject obj)
+    void TeletransportarObjeto(GameObject obj) // Guarda los datos del objeto y lo destruye para que el gestor de destino lo recree en la nueva escena
     {
-        // Guardar datos del objeto antes de destruirlo
         GuardarDatosObjeto(obj);
-        
-        // Destruir el objeto original
         Destroy(obj);
-        
-        // Crear copia en el destino
-        Invoke("CrearObjetoEnDestino", 0.1f);
     }
     
-    void GuardarDatosObjeto(GameObject obj)
+    void GuardarDatosObjeto(GameObject obj) // Guarda la información del objeto para recrearlo en el destino 
     {
-        // Guardar posición relativa al portal
         PortalManager.ultimoObjeto = obj.tag;
         PortalManager.ultimaPosicion = posicionDestino;
-        
-        // Guardar escala y rotación
         PortalManager.ultimaEscala = obj.transform.localScale;
         PortalManager.ultimaRotacion = obj.transform.rotation;
-        
-        // Guardar color si tiene material
-        Renderer r = obj.GetComponent<Renderer>();
-        if (r != null && r.material != null)
-        {
-            PortalManager.ultimoColor = r.material.color;
-        }
-    }
-    
-    void CrearObjetoEnDestino()
-    {
-        // Este método se llama DESDE la escena destino
-        // Necesitamos un objeto gestor allí
     }
 }

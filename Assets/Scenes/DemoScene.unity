@@ -1653,7 +1653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563fe03f6c23dc74bb96ab733c696c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GestorDestino
-  prefabPorDefecto: {fileID: 5874463380868625532, guid: becbdf1594acd4a4e9551e9a83a4b436, type: 3}
+  prefabObjeto: {fileID: 5874463380868625532, guid: becbdf1594acd4a4e9551e9a83a4b436, type: 3}
 --- !u!4 &1813907424
 Transform:
   m_ObjectHideFlags: 0
@@ -1943,7 +1943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2008,7 +2008,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AjustePosicionInicial
   xrOrigin: {fileID: 2112512231}
-  gestorDestino: {fileID: 1813907423}
 --- !u!1001 &1217648788836683143
 PrefabInstance:
   m_ObjectHideFlags: 0
